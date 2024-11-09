@@ -43,7 +43,7 @@ class StegnoGen:
         print(f"File: {f_path} does not exist")
         sys.exit()
 
-    def generate_random_image(self, width=1, height=1, layers=0, output_path="default.png"):
+    def generate_random_image(self, width=1, height=1, layers=0, output_path="output/default.png"):
         """Generate a random noise image and save it."""
         channels = 1 if layers == 0 else 3
         noise = np.random.randint(128, 256, (height, width, channels), dtype=np.uint8)
