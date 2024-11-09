@@ -4,10 +4,14 @@
 
  StegnoGenPy is a proof-of-concept app for embedding text in randomly generated images (color/greyscale) using steganography. It obfuscates text with base64 and hashing for added security. The tool supports encoding and decoding, offering a basic, secure way to hide and retrieve information in images.
 
-
 ## Usage
-TBA
+* read_image(): Accepts an input image file to initialize the StegnoGen image object.
+* generate_random_image(width, height, layers): Generates a random image based on specified dimensions. Set layers to 0 for a greyscale image or 3 for an RGB image.
+* embed_string_to_image(input_str, password, output_filepath="output/default.png"): Embeds a string into an image using a password. If output_filepath is not provided, it defaults to "output/default.png".
+* extract_text_from_image(password): Uses a password to extract and decode the hidden string from the image.
 
+## Limitations
+Avoid compressing images, as this may lead to data loss.
 
 ## Requirements
 To get started, ensure you have all the necessary dependencies. You can install them using the following command:
